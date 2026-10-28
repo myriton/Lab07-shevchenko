@@ -99,7 +99,6 @@ using System.Data;
 int[] grades = {2, 3, 4, 5, 2, 3, 4, 5};
 
 int sum = 0;
-int colvo = 0;
 
 int min = 0;
 int max = 0;
@@ -110,7 +109,6 @@ foreach (int n in grades)
 {
     Console.Write(n + " ");
     sum += n;
-    colvo++;
     if (n > max)
     {
         max = n;
@@ -130,12 +128,12 @@ foreach (int n in grades)
 }
 
 Console.WriteLine();
-double sr = sum / colvo;
+double sr = (double)sum / grades.Length;
 Console.WriteLine($"Средняя {sr}");
 
-Console.WriteLine($"Мин: {min}, Макс: {max}");
+Console.WriteLine($"Мин: {min} Макс: {max}");
 
-Console.WriteLine($"Двойки: {dv}, Пятерки: {pt}");
+Console.WriteLine($"Двойки: {dv} Пятерки: {pt}");
 
 if (sr >= 4.5)
 {
